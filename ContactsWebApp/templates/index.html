@@ -1,13 +1,15 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/ab15933ea4.js" crossorigin="anonymous"></script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contacts Web App</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
 				<input type="search-name" class="contact-search" name="search-area" placeholder="Search">
 			</form>
 
-			<a href="#">
+			<a href="{% url 'add-contact' %}">
 				<i class="fa-solid fa-user-plus"></i>
 			</a>
 		</header>

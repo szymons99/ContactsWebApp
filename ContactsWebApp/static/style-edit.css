@@ -78,19 +78,15 @@ p{
 }
 
 #user{
-    padding: .5em .55em;
-}
-
-#group{
-    padding: .5em .6em;
+    padding: 2em;
 }
 
 #location{
 	padding: .5em .6em;
 }
 
-#delete{
-	padding: .5em .5em;
+#group{
+    border: 1px solid silver; border-radius: 0.25em; padding: 0.5em;
 }
 
 .type{
