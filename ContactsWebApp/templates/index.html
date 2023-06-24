@@ -27,12 +27,13 @@
 
 		<section class="contacts_library">
 			<ul class="contacts-list">
+				{% for contact in contacts %}
+				<a href="{% url 'profile' contact.id %}" style="text-decoration: none;">
 
-				<a href="contact-profile.html">
 					<div class="contact-section">
 						<li class="list-item">
-							<p class="contact-name">John Doe</p>
-							<p class="relationship">Family</p>
+							<p class="contact-name">{{ contact.full_name | title }}</p>
+							<p class="relationship">{{ contact.relationship | title }}</p>
 						</li>
 
 						<li class="list-item">
@@ -43,68 +44,7 @@
 				</a>
 				
 				<hr>
-
-				<a href="contact-profile.html">
-					<div class="contact-section">
-						<li class="list-item">
-							<p class="contact-name">John Doe</p>
-							<p class="relationship">Family</p>
-						</li>
-
-						<li class="list-item">
-							<i class="fa-solid fa-phone fa-flip-horizontal"></i>
-							<i class="fa-solid fa-message text"></i>
-						</li>
-					</div>
-				</a>
-
-				<hr>
-
-				<a href="contact-profile.html">
-					<div class="contact-section">
-						<li class="list-item">
-							<p class="contact-name">Bob Doe</p>
-							<p class="relationship">Family</p>
-						</li>
-
-						<li class="list-item">
-							<i class="fa-solid fa-phone fa-flip-horizontal"></i>
-							<i class="fa-solid fa-message text"></i>
-						</li>
-					</div>
-				</a>
-
-				<hr>
-
-				<a href="contact-profile.html">
-					<div class="contact-section">
-						<li class="list-item">
-							<p class="contact-name">Johnny</p>
-							<p class="relationship">Friend</p>
-						</li>
-
-						<li class="list-item">
-							<i class="fa-solid fa-phone fa-flip-horizontal"></i>
-							<i class="fa-solid fa-message text"></i>
-						</li>
-					</div>
-				</a>
-
-				<hr>
-
-				<a href="contact-profile.html">
-					<div class="contact-section">
-						<li class="list-item">
-							<p class="contact-name">John Doe</p>
-							<p class="relationship">Family</p>
-						</li>
-
-						<li class="list-item">
-							<i class="fa-solid fa-phone fa-flip-horizontal"></i>
-							<i class="fa-solid fa-message text"></i>
-						</li>
-					</div>
-				</a>
+				{% endfor %}
 			</ul>
 		</section>
 	</div>
